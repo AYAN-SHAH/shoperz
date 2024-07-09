@@ -13,7 +13,7 @@ const loginsignup = () => {
 	const login = async () => {
 		console.log("login", formdata);
 		let responsedata;
-		await fetch("https://shoper-backend-production.up.railway.app/login", {
+		await fetch("http://localhost:3000/login", {
 			method: "POST",
 			headers: {
 				Accept: "application/form-data",
@@ -34,7 +34,7 @@ const loginsignup = () => {
 	const Signup = async () => {
 		console.log("Signup", formdata);
 		let responsedata;
-		await fetch("https://shoper-backend-production.up.railway.app/signup", {
+		await fetch("http://localhost:3000/signup", {
 			method: "POST",
 			headers: {
 				Accept: "application/form-data",

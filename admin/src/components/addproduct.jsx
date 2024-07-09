@@ -27,7 +27,7 @@ const AddProduct = () => {
 		let formData = new FormData(); // Corrected FormData capitalization
 		formData.append("product", image);
 
-		await fetch("https://shoper-backend-production.up.railway.app/upload", {
+		await fetch("http://localhost:3000/upload", {
 			method: "POST",
 			headers: { accept: "application/json" },
 			body: formData,
@@ -40,7 +40,7 @@ const AddProduct = () => {
 		if (responsedata.success) {
 			product.image = responsedata.image_url;
 			console.log(product);
-			await fetch("https://shoper-backend-production.up.railway.app/addproduct", {
+			await fetch("http://localhost:3000/addproduct", {
 				method: "POST",
 				headers: {
 					Accept: "application/json",
