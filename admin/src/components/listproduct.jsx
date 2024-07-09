@@ -5,7 +5,7 @@ const ListProduct = () => {
 	const [allproducts, setAllProducts] = useState([]);
 
 	const fetchInfo = async () => {
-		await fetch("https://shoper-backend-production.up.railway.app/allproducts")
+		await fetch("http://localhost:3000/allproducts")
 			.then((res) => res.json())
 			.then((data) => {
 				setAllProducts(data);
@@ -17,7 +17,7 @@ const ListProduct = () => {
 	}, []);
 
 	const removeProduct = async (id) => {
-		await fetch("https://shoper-backend-production.up.railway.app/removeproduct", {
+		await fetch("http://localhost:3000/removeproduct", {
 			method: "POST",
 			headers: {
 				Accept: "application/json",
