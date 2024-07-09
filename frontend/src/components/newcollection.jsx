@@ -4,7 +4,7 @@ const newcollection = () => {
 	const [new_collection, setnew_collection] = useState([]);
 
 	useEffect(() => {
-		fetch("https://shoper-backend-production.up.railway.app/newcollection")
+		fetch("http://localhost:3000/newcollection")
 			.then((response) => response.json())
 			.then((data) => setnew_collection(data));
 	}, []);

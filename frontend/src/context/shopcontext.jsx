@@ -15,7 +15,7 @@ const ShopContextProvider = (props) => {
 	const [cartitem, setcartitem] = useState(getdefaultcart());
 
 	useEffect(() => {
-		fetch("https://shoper-backend-production.up.railway.app/allproducts")
+		fetch("http://localhost:3000/allproducts")
 			.then((Response) => Response.json())
 			.then((data) => setAll_Product(data));
 	}, []);
